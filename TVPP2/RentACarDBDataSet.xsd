@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="RentACarDBDataSet" targetNamespace="http://tempuri.org/RentACarDBDataSet.xsd" xmlns:mstns="http://tempuri.org/RentACarDBDataSet.xsd" xmlns="http://tempuri.org/RentACarDBDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="RentACarDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="RentACarDBConnectionString (Settings)" PropertyReference="ApplicationSettings.TVPP2.Properties.Settings.GlobalReference.Default.RentACarDBConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="KategorijaTableAdapter" GeneratorDataComponentClassName="KategorijaTableAdapter" Name="Kategorija" UserDataComponentName="KategorijaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RentACarDBConnectionString (Settings)" DbObjectName="Kategorija" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT naziv FROM Kategorija</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VoziloTableAdapter" GeneratorDataComponentClassName="VoziloTableAdapter" Name="Vozilo" UserDataComponentName="VoziloTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RentACarDBConnectionString (Settings)" DbObjectName="Vozilo" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT naziv, marka, model, godina_proizvodnje, cena_po_satu FROM Vozilo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="RentACarDBDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="RentACarDBDataSet" msprop:Generator_DataSetName="RentACarDBDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Kategorija" msprop:Generator_RowEvHandlerName="KategorijaRowChangeEventHandler" msprop:Generator_RowDeletedName="KategorijaRowDeleted" msprop:Generator_RowDeletingName="KategorijaRowDeleting" msprop:Generator_RowEvArgName="KategorijaRowChangeEvent" msprop:Generator_TablePropName="Kategorija" msprop:Generator_RowChangedName="KategorijaRowChanged" msprop:Generator_RowChangingName="KategorijaRowChanging" msprop:Generator_TableClassName="KategorijaDataTable" msprop:Generator_RowClassName="KategorijaRow" msprop:Generator_TableVarName="tableKategorija" msprop:Generator_UserTableName="Kategorija">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Vozilo" msprop:Generator_RowEvHandlerName="VoziloRowChangeEventHandler" msprop:Generator_RowDeletedName="VoziloRowDeleted" msprop:Generator_RowDeletingName="VoziloRowDeleting" msprop:Generator_RowEvArgName="VoziloRowChangeEvent" msprop:Generator_TablePropName="Vozilo" msprop:Generator_RowChangedName="VoziloRowChanged" msprop:Generator_RowChangingName="VoziloRowChanging" msprop:Generator_TableClassName="VoziloDataTable" msprop:Generator_RowClassName="VoziloRow" msprop:Generator_TableVarName="tableVozilo" msprop:Generator_UserTableName="Vozilo">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
